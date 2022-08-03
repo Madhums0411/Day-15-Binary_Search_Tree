@@ -20,3 +20,6 @@ BinaryTree.AddNode(67);
 
 int Size = BinaryTree.GetSize();
 Console.WriteLine("Size is:" + Size);
+
+bool result = BinaryTree.SearchKey(63);
+Console.WriteLine(result);
