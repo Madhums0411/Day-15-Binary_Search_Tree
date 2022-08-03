@@ -42,6 +42,19 @@ namespace BinarySearchTree
 
         }
 
+        public int GetSize()
+        {
+            return this.getSizeRecursively(Root);
+        }
+
+        private int getSizeRecursively(BinarySearchTreeNode<K> Current)
+        {
+            //checked node is present or not if present then it will return 1 for every node and will add at the end 
+            return Current == null ? 0 : 1 + this.getSizeRecursively(Current.Left)
+                                           + this.getSizeRecursively(Current.Right);
+        }
+
+
     }
 
 }
